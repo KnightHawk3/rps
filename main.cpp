@@ -88,5 +88,6 @@ void play(int choice) {
 			std::cout << "loss!";
 		}
 	}
+	std::cout << "\n";
 }
 
