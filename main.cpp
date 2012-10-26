@@ -16,6 +16,7 @@ int main (int argc, char** argv) {
 
 	while ((c = getopt (argc, argv, "h::")) != -1) {
 		switch (c) {
+			//Print the help option
 			case 'h':
 				std::cout << "Rock, Paper, Sissors (RPS)\n";
 				std::cout << "Usage: rps [-h] <choice>\n";
@@ -31,6 +32,7 @@ int main (int argc, char** argv) {
 					fprintf (stderr, "Unknown option character `\\x%x'.\n", optopt);
 					return 1;
 				}
+			//Just shows the usage
 			default:
 				std::cout << "Usage: rps [-h] <choice>\n";
 				return 1;
@@ -49,7 +51,7 @@ int main (int argc, char** argv) {
 
 	return 0;
 }
-
+//Random it
 int roll() {
 	int randNum = (rand() % 3) + 1;
 	return randNum;
@@ -86,6 +88,5 @@ void play(int choice) {
 			std::cout << "loss!";
 		}
 	}
-
 }
 
